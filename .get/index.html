@@ -1,0 +1,97 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>crud system</title>
+</head>
+<body>
+    <div class="crudSystem container">
+        <div class="head mt-2   text-center">
+            <h1>CRUD</h1>
+            <p>mange your bussines</p>
+        </div>
+        <div class="inputs mx-auto">
+            <input type="text " id="title" placeholder="title" class="form-control">
+            <div class="price d-flex">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price" class="form-control m-1">
+            <input onkeyup="getTotal()"    type="number" placeholder="taxes" id="taxes" class="form-control m-1">
+            <input onkeyup="getTotal()"  type="number" id="ads" placeholder="ads" class="form-control m-1">
+            <input onkeyup="getTotal()"  type="number" placeholder="disc." id="disc" class="form-control m-1">
+            <small onkeyup="getTotal()"  id="total" class="mx-auto fs-3 "></small>
+            </div>
+            <input type="text" id="category" placeholder="category" class="form-control m-2">
+            <input type="number" id="count" placeholder="count" class="form-control m-2">
+
+            <button   class="btn btn-primary btn-lg w-100     " id="create">create</button>
+        </div>
+        <div class="outPut container">
+            <div class="searchBlock">
+                <input onkeyup="searchCarry(this.value)" type="text" name="" id="searhUnit" placeholder="search" class="form-control m-4"> 
+            </div>
+            <div class="btnSearch">
+                <div class="d-flex gap-5 col-6 mx-auto">
+                    <button onclick="searchModeFun(this.id)" class="btn btn-primary w-50" type="button" id="titleId">search by title</button>
+                    <button onclick="searchModeFun(this.id)" class="btn btn-primary w-50" type="button" id="cateId"> search by catogrey</button>
+                  </div>
+                <div id="deleteALL" class="text-center m-2">
+
+                </div>
+                  <table class="table m-4">
+                    <thead>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>catogrey</th>
+                        <th>count</th>
+                        <th>disc.</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </thead>
+                    <tbody id="tableBody">
+                       
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
